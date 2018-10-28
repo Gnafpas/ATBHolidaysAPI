@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="Beans.ViatorDBBeans.ViatorCategoriesBean" table="viator_categories" schema="develope_viator">
+        <id name="id" column="id"/>
+        <property name="sortOrder" column="sort_order"/>
+        <property name="groupname" column="groupname"/>
+        <property name="thumbnailUrl" column="thumbnail_URL"/>
+        <property name="productCount" column="product_count"/>
+        <property name="groupUrlname" column="groupUrlname"/>
+        <property name="thumbnailHiResUrl" column="thumbnailHiResURL"/>
+        <property name="updatedAt" column="updated_at"/>
+    </class>
+</hibernate-mapping>

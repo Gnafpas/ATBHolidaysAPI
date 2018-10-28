@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="Beans.ATBDBBeans.KalitaonSystem.SubAgencyBean" table="sub_agency" schema="atb_System_DB">
+        <id name="id" column="id"/>
+        <property name="gsaId" column="gsa_id"/>
+        <property name="agentName" column="agent_name"/>
+        <property name="typeOfAgency" column="type_of_agency"/>
+        <property name="firstName" column="first_name"/>
+        <property name="lastName" column="last_name"/>
+        <property name="jobTitle" column="job_title"/>
+        <property name="web" column="web"/>
+        <property name="email" column="email"/>
+        <property name="mobile" column="mobile"/>
+        <property name="telephone" column="telephone"/>
+        <property name="countryCode" column="country_code"/>
+        <property name="countryName" column="country_name"/>
+        <property name="cityCode" column="city_code"/>
+        <property name="cityName" column="city_name"/>
+        <property name="billingAddress" column="billing_address"/>
+        <property name="billingEmail" column="billing_email"/>
+        <property name="iata" column="IATA"/>
+        <property name="tursab" column="TURSAB"/>
+        <property name="clia" column="CLIA"/>
+        <property name="asta" column="ASTA"/>
+        <property name="other" column="other"/>
+        <property name="taxOffice" column="tax_office"/>
+        <property name="taxNo" column="tax_no"/>
+        <property name="bankName" column="bank_name"/>
+        <property name="bankAddress" column="bank_address"/>
+        <property name="bankCity" column="bank_city"/>
+        <property name="bankState" column="bank_state"/>
+        <property name="bankCountry" column="bank_country"/>
+        <property name="accountName" column="account_name"/>
+        <property name="accountNumber" column="account_number"/>
+        <property name="iban" column="iban"/>
+        <property name="swift" column="swift"/>
+        <property name="commission" column="commission"/>
+        <property name="markup" column="markup"/>
+        <property name="trsMkp" column="trs_mkp"/>
+        <property name="dtrMkp" column="dtr_mkp"/>
+        <property name="mtrMkp" column="mtr_mkp"/>
+        <property name="otlMkp" column="otl_mkp"/>
+        <property name="grpMkp" column="grp_mkp"/>
+        <property name="evtMkp" column="evt_mkp"/>
+        <property name="deposit" column="deposit"/>
+        <property name="currency" column="currency"/>
+        <property name="logo" column="logo"/>
+        <property name="xmlStatus" column="xml_status"/>
+        <property name="xmlStorekey" column="xml_storekey"/>
+        <property name="notes" column="notes"/>
+        <property name="activation" column="activation"/>
+        <property name="createdDate" column="created_date"/>
+    </class>
+</hibernate-mapping>
