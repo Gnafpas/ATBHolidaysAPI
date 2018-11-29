@@ -607,7 +607,7 @@ public class BookController {
                     viatorBookPOST.setItems(viatorItems);
                     viatorBookPOST.setNewsletterSignUp(false);
                     viatorBookPOST.setBooker(bookPOST.getBooker());
-                    viatorBookPOST.getBooker().setEmail("george@skamnos.com");//todo change to atbholidays mail.
+                    viatorBookPOST.getBooker().setEmail("georgios.nafpaktitis@atbholidays.com");
                     viatorBookPOST.setCurrencyCode(subAgencyBean.getCurrency());
                     PartnerDetail partenerDetail = new PartnerDetail();
                     partenerDetail.setDistributorRef(dateTime.toString());
@@ -1318,7 +1318,7 @@ public class BookController {
                         evnTicketsproduct.setSku(atbProduct.getProductCode());
                         evnTicketsproduct.setAmount(eventsTravelItem.getTravellers().size());
                         evnTicketsproduct.setCompany("ATB Holidays");
-                        evnTicketsproduct.setEmail("george@skamnos.com");
+                        evnTicketsproduct.setEmail("georgios.nafpaktitis@atbholidays.com");
 //                    product.setBooking_reference(order.getBooking_reference());
 //                    product.setCheckin_date(order.getCheckin_date());
 //                    product.setCity(order.getCity());

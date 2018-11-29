@@ -1471,7 +1471,7 @@ public class BookPrebookController {
                                     NonStaticXMLAPI nonStaticXMLAPI = new NonStaticXMLAPI();
                                     NonStaticXMLAPISoap nonStaticXMLAPISoap = nonStaticXMLAPI.getNonStaticXMLAPISoap();//todo remove email and add atb's fixed email
                                     sunHotelsRequest = subAgencyBean.getCurrency() + "" + "English" + "" +
-                                            "george@skamnos.com" + "" + xmlCheckin + "" + xmlCheckout + "" + params.getRoomId() + "" + params.getRooms() + "" +
+                                            "georgios.nafpaktitis@atbholidays.com" + "" + xmlCheckin + "" + xmlCheckout + "" + params.getRoomId() + "" + params.getRooms() + "" +
                                             numOfAdults + "" + numOfChildren + "" + params.getInfant() + "" +
                                             sunHotelsOriginalMealId + "" + adults[0].getFirst_name() + "" + adults[0].getLast_name() + "" + adults[1].getFirst_name() + "" + adults[1].getLast_name() + "" +
                                             adults[2].getFirst_name() + "" + adults[2].getLast_name() + "" + adults[3].getFirst_name() + "" + adults[3].getLast_name() + "" + adults[4].getFirst_name() + "" +
@@ -1484,7 +1484,7 @@ public class BookPrebookController {
                                             children[7].getFirst_name() + "" + children[7].getLast_name() + "" + children[7].getAge() + "" + children[8].getFirst_name() + "" + children[8].getLast_name() + "" +
                                             children[8].getAge() + "" + 1 + "," + params.getEmail() + "," + params.getCustomerCountry() + "" + prebookCode[0];
                                     result = nonStaticXMLAPISoap.bookV2(sunhotelsUsername, sunhotelspass, subAgencyBean.getCurrency(), "English",//todo change email to info@atbholidays
-                                            "george@skamnos.com", xmlCheckin, xmlCheckout, params.getRoomId(), params.getRooms(),
+                                            "georgios.nafpaktitis@atbholidays.com", xmlCheckin, xmlCheckout, params.getRoomId(), params.getRooms(),
                                             numOfAdults, numOfChildren, params.getInfant(), "", "",
                                             sunHotelsOriginalMealId, adults[0].getFirst_name(), adults[0].getLast_name(), adults[1].getFirst_name(), adults[1].getLast_name(),
                                             adults[2].getFirst_name(), adults[2].getLast_name(), adults[3].getFirst_name(), adults[3].getLast_name(), adults[4].getFirst_name(),
