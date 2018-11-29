@@ -109,7 +109,7 @@
 
 
     <build>
-      <finalName>testServiwece</finalName>
+      <finalName>testService</finalName>
       <plugins>
           <plugin>
               <groupId>org.springframework.boot</groupId>
