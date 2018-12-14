@@ -2227,8 +2227,8 @@ public class FrontEndAPIServices {
 //                        hotelsResponse.remove(i);
 //            }
         SunHotelsSearchJSON hotelSearchJSON = new SunHotelsSearchJSON();
-        Application.agent.time("app.web.request.timming.frontend.noPicturesSearch", new Runnable() {
-            public void run() {
+      //  Application.agent.time("app.web.request.timming.frontend.noPicturesSearch", new Runnable() {
+      //      public void run() {
                 Application.agent.increment("app.web.request.frontend.noPircturesSearch");
 
                 StatelessSession session = SunHotelsHibernateUtil.getSession();
@@ -2293,7 +2293,7 @@ public class FrontEndAPIServices {
                             if (destinationBean.getDestinationId() != 0)
                                 originalDestinationId = destinationBean.getDestinationId();
                             if (originalDestinationId == 0 && (destinationBean.getHotelBedsCode() == null || destinationBean.getHotelBedsCode().equals(""))) {
-                                return ;
+                                throw null;
                             } else
                                 originalDestinationIdStrFormat = String.valueOf(originalDestinationId);
                         }
@@ -2322,8 +2322,8 @@ public class FrontEndAPIServices {
 
                     }
 
-                    if(params.getCurrencies()==null || params.getCurrencies().size()!=1){
-                        return;
+                    if(params.getCurrencies()!=null && params.getCurrencies().size()==1){
+                        throw null;
                     }
 
 
@@ -2626,7 +2626,7 @@ public class FrontEndAPIServices {
                     e.printStackTrace(new PrintWriter(errors));
                     errLogger.info(errors.toString());
                 }
-            }});
+      //      }});
                 return hotelSearchJSON;
 
 
