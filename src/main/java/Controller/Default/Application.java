@@ -1,11 +1,10 @@
-package Controller;
+package Controller.Default;
 
 import Helper.CustomErrLogger;
 import Helper.CustomInfoLogger;
 import Helper.ProjectProperties;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 import java.io.IOException;
 import java.util.logging.FileHandler;
