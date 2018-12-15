@@ -29,9 +29,11 @@ public class Application extends SpringBootServletInitializer {
     public static CustomInfoLogger userlogs;
     //public static Agent agent;
 
-    @Override
-    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+//    @Override
+//    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
 
+    public static void main(String[] args) throws Exception {
+        //agent = new Agent(new AgentOptions().setApiKey("164825f1c19e59d34c3f32faeb88f66f").setEnabled(true));
         // = new Agent(new AgentOptions().setApiKey("164825f1c19e59d34c3f32faeb88f66f").setEnabled(true));
 
         /**
@@ -75,7 +77,7 @@ public class Application extends SpringBootServletInitializer {
 
 //        errLogger.info("App started...");
 //        userlogs.info("App started...");
-        return application.sources(Application.class);
+//        return application.sources(Application.class);
     }
 }
 
