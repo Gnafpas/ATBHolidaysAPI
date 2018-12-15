@@ -53,7 +53,7 @@ public class HotelPostBookController {
                                          @RequestParam(value = "currencyCode", defaultValue = "") String currencyCode,
                                          @RequestParam("apiKey") String apiKey) {
 
-        Application.agent.increment("app.web.request.api.hotel.bookingInfo");
+      //  Application.agent.increment("app.web.request.api.hotel.bookingInfo");
         BookInfoJSON bookInfoJSON=new BookInfoJSON();
         List<BookResult> bookings=new ArrayList<>();
         try {
@@ -251,7 +251,7 @@ public class HotelPostBookController {
     public CancelJSON cancelBooking(@RequestParam(value="bookingNumber", defaultValue="0") int bookingId,
                                     @RequestParam("apiKey") String apiKey) {
 
-        Application.agent.increment("app.web.request.api.hotel.cancelBooking");
+      //  Application.agent.increment("app.web.request.api.hotel.cancelBooking");
         CancelJSON cancelJSON=new CancelJSON();
         CancellResult cancellResult= new CancellResult();
         cancellResult.setCancellationSucceed(false);

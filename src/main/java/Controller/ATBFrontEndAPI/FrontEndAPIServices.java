@@ -90,7 +90,7 @@ public class FrontEndAPIServices {
     @ResponseBody
     public SunHotelsBookJSON hotelBook(@RequestBody SunhotelsBookPOST params,@RequestParam("apiKey") String apiKey){
 
-        Application.agent.increment("app.web.request.frontend.HotelBook");
+       // Application.agent.increment("app.web.request.frontend.HotelBook");
 
         DateTime dateTime =new DateTime( DateTimeZone.UTC);
         BookLogBean bookLogBean=new BookLogBean();
@@ -1076,7 +1076,7 @@ public class FrontEndAPIServices {
     @ResponseBody
     public SunHotelsPrebookJSON hotelPrebook(@RequestBody SunHotelsPrebookPOST params){
 
-        Application.agent.increment("app.web.request.frontend.preBook");
+        //Application.agent.increment("app.web.request.frontend.preBook");
 
         PreBookResult result=null;
         AvailabilityPOST availabilityPOST = new AvailabilityPOST();
@@ -2229,7 +2229,7 @@ public class FrontEndAPIServices {
         SunHotelsSearchJSON hotelSearchJSON = new SunHotelsSearchJSON();
       //  Application.agent.time("app.web.request.timming.frontend.noPicturesSearch", new Runnable() {
       //      public void run() {
-                Application.agent.increment("app.web.request.frontend.noPircturesSearch");
+             //   Application.agent.increment("app.web.request.frontend.noPircturesSearch");
 
                 StatelessSession session = SunHotelsHibernateUtil.getSession();
                 session.beginTransaction();
@@ -2721,7 +2721,7 @@ public class FrontEndAPIServices {
 //        bookPOST.setPartnerDetail(partenerDetail);
 //        return BookingsAPIDAO.book(bookPOST);
 
-        Application.agent.increment("app.web.request.frontend.viatorBook");
+       // Application.agent.increment("app.web.request.frontend.viatorBook");
 
         BookAPIJSON bookInfoJSON = new BookAPIJSON();
         try {
@@ -3054,7 +3054,7 @@ public class FrontEndAPIServices {
     @RequestMapping(value = "/booking/viatorCancel", method = RequestMethod.POST,consumes = "application/json")
     @ResponseBody
     public CancelAPIJSON cancelViator(@RequestBody CancelPOST cancelPOST){
-        Application.agent.increment("app.web.request.frontend.viatorCancel");
+       // Application.agent.increment("app.web.request.frontend.viatorCancel");
         return BookingsAPIDAO.cancellation(cancelPOST);
     }
 
@@ -3062,7 +3062,7 @@ public class FrontEndAPIServices {
     @ResponseBody
     public PastBookingAPIJSON pastBookingiator(@RequestParam(value = "email", defaultValue = "") String email,
                                                @RequestParam(value = "itineraryId", defaultValue = "") int itineraryId){
-        Application.agent.increment("app.web.request.frontend.viatorPastBooking");
+     //   Application.agent.increment("app.web.request.frontend.viatorPastBooking");
         return BookingsAPIDAO.pastbooking(email,itineraryId);
     }
 
@@ -3071,7 +3071,7 @@ public class FrontEndAPIServices {
     @ResponseBody
     public EventsTravelCreateOrderResponse bookEventsTravel(@RequestBody EventsTravelBookPOST bookPOST, @RequestParam(value="demo", defaultValue="true") boolean demo){
 
-        Application.agent.increment("app.web.request.frontend.bookEventsTravel");
+      //  Application.agent.increment("app.web.request.frontend.bookEventsTravel");
 
         ObjectMapper mapper = new ObjectMapper();
         BookLogBean bookLogBean=new BookLogBean();

@@ -29,10 +29,10 @@ public class Application extends SpringBootServletInitializer {
 
     public static CustomErrLogger errLogger;
     public static CustomInfoLogger userlogs;
-    public static Agent agent;
+    //public static Agent agent;
 
     public static void main(String[] args) throws Exception {
-        agent = new Agent(new AgentOptions().setApiKey("164825f1c19e59d34c3f32faeb88f66f").setEnabled(true));
+        //agent = new Agent(new AgentOptions().setApiKey("164825f1c19e59d34c3f32faeb88f66f").setEnabled(true));
 
         /**
          * Set up logger.

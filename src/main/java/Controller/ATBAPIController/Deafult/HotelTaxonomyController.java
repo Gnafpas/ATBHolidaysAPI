@@ -26,7 +26,7 @@ public class HotelTaxonomyController {
 
     @RequestMapping("/hotel/taxonomy/destinations")
     public DestinationJSON getAllDestinations(){
-        Application.agent.increment("app.web.request.api.hotel.destinations");
+       // Application.agent.increment("app.web.request.api.hotel.destinations");
         List<Destination> atbDestinations=new ArrayList<>();
         Destination atbDestination;
         List<DestinationBean> destinations;

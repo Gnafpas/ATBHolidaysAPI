@@ -226,8 +226,8 @@ public class UpdateProducts {
              */
             if (!taxonomyDestinationsAPIJSON.isSuccess() || taxonomyDestinationsAPIJSON.getData() == null) {
                 logger.info("********************** Communication ERROR.Did not received Destinations **********************");
-                Application.agent.increment("app.web.error.updates.viatorUpdates");
-                Application.agent.notice("********************** Communication ERROR.Did not received Destinations **********************");
+              //  Application.agent.increment("app.web.error.updates.viatorUpdates");
+              //  Application.agent.notice("********************** Communication ERROR.Did not received Destinations **********************");
                 updateProductsInfoJSON.setViatorError(true);
                 updateProductsInfoJSON.setViatorErrorInfo("Communication ERROR.Did not received Destinations");
                 return updateProductsInfoJSON;
@@ -1137,8 +1137,8 @@ public class UpdateProducts {
              */
             if (DeleteCorruptedProducts.deleteCorruptedProducts(logger)) {
                 updateProductsInfoJSON.setDbCommError(true);
-                Application.agent.increment("app.web.error.updates.viatorUpdates");
-                Application.agent.notice("**********************     " + " Error while delleting corrupted products from database");
+              //  Application.agent.increment("app.web.error.updates.viatorUpdates");
+              //  Application.agent.notice("**********************     " + " Error while delleting corrupted products from database");
                 logger.info("\n\n**********************     " + " Error while delleting corrupted products from database");
             }//todo If ever change to simultation atb and viator update:remove this code and delete details of the product imidiately  when a failed viator communication takes place
             /**

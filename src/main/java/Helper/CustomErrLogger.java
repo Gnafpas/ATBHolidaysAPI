@@ -15,8 +15,8 @@ public class CustomErrLogger extends Logger {
     }
 
     public void info(String msg) {
-        Application.agent.increment("app.web.error.generalError");
-        Application.agent.notice(msg);
+     //   Application.agent.increment("app.web.error.generalError");
+     //   Application.agent.notice(msg);
         log(Level.INFO, msg);
     }
 }

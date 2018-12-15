@@ -41,8 +41,8 @@ public class DeleteATBExpiredProducts {
         }
         else {
             if(viatorProducts.size()<30000){
-                Application.agent.increment("app.web.error.updates.viatorATBUpdates",1,0);
-                Application.agent.notice("***Setting not available  Expired Products Procedure didn't accomplished because develope_viator DB has less than 30000 products currently.***");
+             //   Application.agent.increment("app.web.error.updates.viatorATBUpdates",1,0);
+             //   Application.agent.notice("***Setting not available  Expired Products Procedure didn't accomplished because develope_viator DB has less than 30000 products currently.***");
                 logger.info("***Setting not available  Expired Products Procedure didn't accomplished because develope_viator DB has less than 30000 products currently.***");
                 return totalExpiredProducts;
             }

@@ -42,7 +42,7 @@ public class PrebookController {
     public AvailabilityJSON availability(@RequestParam(value = "productId", defaultValue = "") String productId,
                                          @RequestParam(value = "planId", defaultValue = "") String planId) {
 
-        Application.agent.increment("app.web.request.api.product.availability");
+       // Application.agent.increment("app.web.request.api.product.availability");
         AvailabilityJSON availabilityJSON = new AvailabilityJSON();
         try {
             DateTime dateTime = new DateTime(DateTimeZone.UTC);
@@ -155,7 +155,7 @@ public class PrebookController {
                                            @RequestParam(value = "currencyCode", defaultValue = "") String currencyCode,
                                            @RequestParam("apiKey") String apiKey) {
 
-        Application.agent.increment("app.web.request.api.product.pricingmatrix");
+      //  Application.agent.increment("app.web.request.api.product.pricingmatrix");
         PricingmatrixJSON pricingmatrixJSON = new PricingmatrixJSON();
         try {
             DateTime dateTime = new DateTime(DateTimeZone.UTC);
@@ -405,7 +405,7 @@ public class PrebookController {
 
 
 
-        Application.agent.increment("app.web.request.api.product.calculatePrice");
+       // Application.agent.increment("app.web.request.api.product.calculatePrice");
         CalculatePriceJSON calculatePriceJSON = new CalculatePriceJSON();
         try {
             DateTime dateTime = new DateTime(DateTimeZone.UTC);

@@ -16,7 +16,7 @@ public class CustomInfoLogger extends Logger {
     }
 
     public void info(String msg) {
-        Application.agent.increment("app.web.webSite.hotelUsers");
+       // Application.agent.increment("app.web.webSite.hotelUsers");
         log(Level.INFO, msg);
     }
 }

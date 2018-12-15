@@ -43,7 +43,7 @@ public class ProductPostBookController {
                                             @RequestParam(value = "currencyCode", defaultValue = "") String currencyCode,
                                             @RequestParam("apiKey") String apiKey) {
 
-        Application.agent.increment("app.web.request.api.product.bookingInfo");
+       // Application.agent.increment("app.web.request.api.product.bookingInfo");
         BookingInfoJSON bookInfoJSON=new BookingInfoJSON();
         try {
             DateTime dateTime = new DateTime(DateTimeZone.UTC);
@@ -208,7 +208,7 @@ public class ProductPostBookController {
                                     @RequestParam(value="itemId", defaultValue="") String itemId,
                                     @RequestParam("apiKey") String apiKey) {
 
-        Application.agent.increment("app.web.request.api.product.cancelBooking");
+       // Application.agent.increment("app.web.request.api.product.cancelBooking");
         CancelJSON cancelJSON=new CancelJSON();
         List<ItemCancellationResult> itemsCancellationResult=new ArrayList<>();
         ItemCancellationResult itemCancellationResult;
