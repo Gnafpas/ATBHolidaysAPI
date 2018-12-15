@@ -2322,7 +2322,7 @@ public class FrontEndAPIServices {
 
                     }
 
-                    if(params.getCurrencies()!=null && params.getCurrencies().size()==1){
+                    if(params.getCurrencies()==null || params.getCurrencies().size()!=1){
                         throw null;
                     }
 
@@ -2626,6 +2626,7 @@ public class FrontEndAPIServices {
                     e.printStackTrace(new PrintWriter(errors));
                     errLogger.info(errors.toString());
                 }
+
       //      }});
                 return hotelSearchJSON;
 
