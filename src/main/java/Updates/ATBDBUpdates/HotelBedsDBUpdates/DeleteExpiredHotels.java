@@ -116,8 +116,8 @@ public class DeleteExpiredHotels {
                             }
                         }
                     } else {
-                        Application.agent.increment("app.web.error.updates.hotelBeds",1,0);
-                        Application.agent.notice("********************** Communication ERROR with sunHotels server while deleting expired products. **********************");
+                    //    Application.agent.increment("app.web.error.updates.hotelBeds",1,0);
+                    //    Application.agent.notice("********************** Communication ERROR with sunHotels server while deleting expired products. **********************");
                         logger.info("********************** Communication ERROR with sunHotels server while deleting expired products. **********************");
                         totalExpiredHotels.setSunHotelsCommErrCounter(totalExpiredHotels.getSunHotelsCommErrCounter()+1);
                     }

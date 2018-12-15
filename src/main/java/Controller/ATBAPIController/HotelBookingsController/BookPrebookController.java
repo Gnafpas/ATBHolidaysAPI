@@ -150,7 +150,7 @@ public class BookPrebookController {
     @ResponseBody
     public PrebookJSON hotelPrebook(@RequestBody PrebookPOST params,@RequestParam("apiKey") String apiKey) {
 
-        Application.agent.increment("app.web.request.api.hotel.prebook");
+      //  Application.agent.increment("app.web.request.api.hotel.prebook");
         SubAgencyBean subAgencyBean = null;
         GsaBean gsaBean;
         String saltedPassword = Helper.ProjectProperties.SALTForKeyGeneration + apiKey;
@@ -871,7 +871,7 @@ public class BookPrebookController {
     @ResponseBody
     public BookJSON hotelBook(@RequestBody BookPOST params,@RequestParam("apiKey") String apiKey) {
 
-        Application.agent.increment("app.web.request.api.hotel.book");
+      //  Application.agent.increment("app.web.request.api.hotel.book");
         SubAgencyBean subAgencyBean=null;
         BookJSON bookJSON = new BookJSON();
         BookResult bookResult = new BookResult();

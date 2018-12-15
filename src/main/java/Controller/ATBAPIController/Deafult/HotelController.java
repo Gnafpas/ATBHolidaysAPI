@@ -72,7 +72,7 @@ public class HotelController {
     @RequestMapping(value = "/hotel/hotelStaticContent", method = RequestMethod.POST, consumes = "application/json")
     @ResponseBody
     public HotelStaticContentJSON hotelStaticContent(@RequestBody HotelStaticContentPOST params) {
-        Application.agent.increment("app.web.request.api.hotel.hotelStaticContent");
+       // Application.agent.increment("app.web.request.api.hotel.hotelStaticContent");
         HotelStaticContentJSON hotelSearchJSON = new HotelStaticContentJSON();
         DateTime dateTime = new DateTime(DateTimeZone.UTC);
         try {
@@ -288,7 +288,7 @@ public class HotelController {
 
     @RequestMapping("/hotel/resorts")
     public ResortJSON resorts(@RequestParam(value="DestinationId", defaultValue="0") String DestinationId) {
-        Application.agent.increment("app.web.request.api.hotel.resorts");
+       // Application.agent.increment("app.web.request.api.hotel.resorts");
         ResortJSON resortJSON=new ResortJSON();
         try {
             DateTime dateTime = new DateTime(DateTimeZone.UTC);
@@ -329,7 +329,7 @@ public class HotelController {
 
     @RequestMapping("/hotel/meals")
     public MealsJSON meals() {
-        Application.agent.increment("app.web.request.api.hotel.meals");
+      //  Application.agent.increment("app.web.request.api.hotel.meals");
         MealsJSON mealsJSON=new MealsJSON();
         try {
             DateTime dateTime = new DateTime(DateTimeZone.UTC);
@@ -370,7 +370,7 @@ public class HotelController {
 
     @RequestMapping("/hotel/facilities")
     public FacilitiesJSON facilities() {
-        Application.agent.increment("app.web.request.api.hotel.facilities");
+       // Application.agent.increment("app.web.request.api.hotel.facilities");
         FacilitiesJSON facilitiesJSON=new FacilitiesJSON();
         try {
             DateTime dateTime = new DateTime(DateTimeZone.UTC);
@@ -412,7 +412,7 @@ public class HotelController {
 
     @RequestMapping("/hotel/roomTypes")
     public RoomTypesJSON roomTypes() {
-        Application.agent.increment("app.web.request.api.hotel.roomTypes");
+      //  Application.agent.increment("app.web.request.api.hotel.roomTypes");
         RoomTypesJSON roomTypesJSON=new RoomTypesJSON();
 
         try {
@@ -451,7 +451,7 @@ public class HotelController {
 
     @RequestMapping("/hotel/accommodations")
     public AccommodationJSON accommodations() {
-        Application.agent.increment("app.web.request.api.hotel.accommodations");
+      //  Application.agent.increment("app.web.request.api.hotel.accommodations");
         AccommodationJSON accommodationJSON=new AccommodationJSON();
         try {
             DateTime dateTime = new DateTime(DateTimeZone.UTC);
@@ -490,7 +490,7 @@ public class HotelController {
     @RequestMapping(value = "/hotel/detailedSearch", method = RequestMethod.POST, consumes = "application/json")
     @ResponseBody
     public HotelSearchJSON detailedSearch(@RequestBody HotelSearchPOST params,@RequestParam("apiKey") String apiKey) {
-        Application.agent.increment("app.web.request.api.hotel.detailedSearch");
+      //  Application.agent.increment("app.web.request.api.hotel.detailedSearch");
         StatelessSession session = SunHotelsHibernateUtil.getSession();
         StatelessSession systemDBSession = ATBSysHibernateUtil.getStatelessSession();
         session.beginTransaction();
@@ -507,7 +507,7 @@ public class HotelController {
                     dateTime.getYear(), dateTime.getMonthOfYear(), dateTime.getDayOfMonth(),
                     dateTime.getHourOfDay(), dateTime.getMinuteOfHour(), dateTime.getSecondOfMinute())).toString() + "+0000");
             if (subAgencyBean != null) {
-                Application.agent.notice(subAgencyBean.getAgentName());
+              //  Application.agent.notice(subAgencyBean.getAgentName());
                 if (subAgencyBean.getGsaId() != null && !subAgencyBean.getGsaId().equals("")) {
                     gsaBean = GsaDAO.getGsaById(Integer.parseInt(subAgencyBean.getGsaId()), systemDBSession);
                     if (gsaBean != null) {

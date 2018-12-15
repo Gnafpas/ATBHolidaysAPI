@@ -47,7 +47,7 @@ public class ProductController {
                                                                  @RequestParam("apiKey") String apiKey){
 
 
-        Application.agent.increment("app.web.request.api.product.search");
+      //  Application.agent.increment("app.web.request.api.product.search");
         ProductsAndCategoriesJSON productsAndCategoriesJSON =new ProductsAndCategoriesJSON();
         List <AProductTitleBean>  aProductTitlebeans;
         int i=0;
@@ -71,7 +71,7 @@ public class ProductController {
 
 
                 //todo prevent abstract request(request without defining any parameter.country,city,freetext etc )
-                Application.agent.notice(subAgencyBean.getAgentName());
+              //  Application.agent.notice(subAgencyBean.getAgentName());
                 if (params.getCountryCode()!=null && !params.getCountryCode().equals(""))
                     params.setCountryCode(params.getCountryCode() + " ");//todo fix isocode at the database(Remove the space at the end of the code) or live it like this
                 DateTime dateTime = new DateTime(DateTimeZone.UTC);
@@ -262,7 +262,7 @@ public class ProductController {
                                                 @RequestParam("apiKey") String apiKey
                                                 ) {
 
-        Application.agent.increment("app.web.request.api.product.productDetails");
+       // Application.agent.increment("app.web.request.api.product.productDetails");
         ProductDetailsJSON productDetailsJSON = new ProductDetailsJSON();
         DateTime dateTime =new DateTime( DateTimeZone.UTC);
         productDetailsJSON.setDateStamp(Timestamp.valueOf(String.format("%04d-%02d-%02d %02d:%02d:%02d",
@@ -286,7 +286,7 @@ public class ProductController {
                     gsaBean.getMtrMkp() != null && !gsaBean.getMtrMkp().equals("") &&
                     gsaBean.getEvtMkp() != null && !gsaBean.getEvtMkp().equals("")) {
 
-                Application.agent.notice(subAgencyBean.getAgentName());
+              //  Application.agent.notice(subAgencyBean.getAgentName());
                 ProductsAndCategoriesPOST params = new ProductsAndCategoriesPOST();
                 params.setProductId(Integer.valueOf(productId));
                 if (currencyCode != null)

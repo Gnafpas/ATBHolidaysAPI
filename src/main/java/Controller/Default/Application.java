@@ -1,19 +1,17 @@
-package Controller;
+package Controller.Default;
 
 import Helper.CustomErrLogger;
 import Helper.CustomInfoLogger;
 import Helper.ProjectProperties;
-import com.instrumentalapp.Agent;
-import com.instrumentalapp.AgentOptions;
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
-
 import java.io.IOException;
 import java.util.logging.FileHandler;
 import java.util.logging.Handler;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
+import com.instrumentalapp.*;
 
 
 /**
@@ -31,8 +29,10 @@ public class Application extends SpringBootServletInitializer {
     public static CustomInfoLogger userlogs;
     //public static Agent agent;
 
-    public static void main(String[] args) throws Exception {
-        //agent = new Agent(new AgentOptions().setApiKey("164825f1c19e59d34c3f32faeb88f66f").setEnabled(true));
+    @Override
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+
+        // = new Agent(new AgentOptions().setApiKey("164825f1c19e59d34c3f32faeb88f66f").setEnabled(true));
 
         /**
          * Set up logger.
@@ -73,7 +73,9 @@ public class Application extends SpringBootServletInitializer {
             e.printStackTrace();
         }
 
-        SpringApplication.run(Application.class, args);
+//        errLogger.info("App started...");
+//        userlogs.info("App started...");
+        return application.sources(Application.class);
     }
 }
 

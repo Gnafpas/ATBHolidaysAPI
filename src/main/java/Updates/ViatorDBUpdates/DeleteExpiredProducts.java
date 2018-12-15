@@ -134,8 +134,8 @@ public class DeleteExpiredProducts {
                             }
                         }
                     }else{
-                        Application.agent.increment("app.web.error.updates.viatorUpdates");
-                        Application.agent.notice("********************** Communication ERROR with Viator server while deleting expired products. **********************");
+                      //  Application.agent.increment("app.web.error.updates.viatorUpdates");
+                      //  Application.agent.notice("********************** Communication ERROR with Viator server while deleting expired products. **********************");
                         logger.info("********************** Communication ERROR with Viator server while deleting expired products. **********************");
                         totalExpiredProducts.setViatorError(true);
                         totalExpiredProducts.setViatorErrorInfo("Communication ERROR with Viator server while deleting expired products.");

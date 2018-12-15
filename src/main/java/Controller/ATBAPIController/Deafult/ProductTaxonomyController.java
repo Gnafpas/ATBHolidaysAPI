@@ -35,7 +35,7 @@ public class ProductTaxonomyController {
 
     @RequestMapping("/product/taxonomy/languages")
     public LanguagesJSON getAllLanguages(){
-        Application.agent.increment("app.web.request.api.product.languages");
+      //  Application.agent.increment("app.web.request.api.product.languages");
         List<AllLanguageBean> languages;
         LanguagesJSON languagesJSON=new LanguagesJSON();
         try {
@@ -64,7 +64,7 @@ public class ProductTaxonomyController {
 
     @RequestMapping("/product/taxonomy/countries")
     public CountriesJSON getAllCountries(){
-        Application.agent.increment("app.web.request.api.product.countries");
+      //  Application.agent.increment("app.web.request.api.product.countries");
         List<CountryCodeBean> countries;
         CountriesJSON countriesJSON=new CountriesJSON();
         try {
@@ -92,7 +92,7 @@ public class ProductTaxonomyController {
 
     @RequestMapping("/product/taxonomy/citiesOfCountry")
     public CitiesJSON getAllCities(@RequestParam (value="countryCode", defaultValue="") String countryCode){
-        Application.agent.increment("app.web.request.api.product.citiesOfCountry");
+      //  Application.agent.increment("app.web.request.api.product.citiesOfCountry");
         List<CityCodeBean> cities;
         CitiesJSON citiesJSON = new CitiesJSON();
         try {
@@ -124,7 +124,7 @@ public class ProductTaxonomyController {
     @RequestMapping("/product/taxonomy/categories")
     public CategoriesJson getAllCategories(@RequestParam (value="cityCode", defaultValue="") String cityCode){
         //todo fix country codes at database.they have spaces
-        Application.agent.increment("app.web.request.api.product.categories");
+       // Application.agent.increment("app.web.request.api.product.categories");
         ProductsAndCategoriesPOST params=new ProductsAndCategoriesPOST();
         CategoriesJson categoriesJson = new CategoriesJson();
         try {
