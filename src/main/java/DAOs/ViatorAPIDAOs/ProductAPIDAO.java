@@ -17,7 +17,7 @@ import org.springframework.web.client.RestTemplate;
 import java.util.ArrayList;
 import java.util.List;
 
-import static Controller.Default.Application.errLogger;
+import static Controller.Application.errLogger;
 
 
 /**

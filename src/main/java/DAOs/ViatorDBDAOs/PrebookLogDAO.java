@@ -1,29 +1,18 @@
 package DAOs.ViatorDBDAOs;
 
-import APIJSONs.ATBAPIJSONs.PrebookJSON;
-import APIJSONs.ATBAPIJSONs.PrebookPOST;
-import Beans.ATBDBBeans.KalitaonSystem.SubAgencyBean;
 import Beans.ViatorDBBeans.PrebookLogBean;
-import DAOs.SunHotelsAPIDAOs.PreBookResult;
 import DBConnection.HibernateUtil;
-import DBConnection.SunHotelsHibernateUtil;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mysql.cj.core.exceptions.CJCommunicationsException;
 import javax.xml.ws.WebServiceException;
 import org.hibernate.HibernateException;
 import org.hibernate.StatelessSession;
 import org.hibernate.Transaction;
-import org.joda.time.DateTime;
-import org.joda.time.DateTimeZone;
 
 import javax.persistence.NoResultException;
 import java.io.PrintWriter;
 import java.io.StringWriter;
-import java.sql.Timestamp;
-import java.util.List;
 
-import static Controller.Default.Application.errLogger;
+import static Controller.Application.errLogger;
 
 /**
  * Created by George on 06/04/2018.

@@ -2,7 +2,6 @@ package DAOs.ATBDBDAOs.KalitaonLogDAOs;
 
 import Beans.ATBDBBeans.KalitaonLog.PrebookLogBean;
 import DBConnection.ATBLogHibernateUtil;
-import DBConnection.ATBSysHibernateUtil;
 import com.mysql.cj.core.exceptions.CJCommunicationsException;
 import javax.xml.ws.WebServiceException;
 import org.hibernate.HibernateException;
@@ -12,7 +11,7 @@ import javax.persistence.NoResultException;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 
-import static Controller.Default.Application.errLogger;
+import static Controller.Application.errLogger;
 
 /**
  * Created by George on 01/02/2018.

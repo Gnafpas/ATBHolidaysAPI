@@ -4,7 +4,6 @@ import APIJSONs.ATBAPIJSONs.Product.*;
 import Beans.ATBDBBeans.KalitaonProduct.*;
 import Beans.ATBDBBeans.KalitaonSystem.GsaBean;
 import Beans.ATBDBBeans.KalitaonSystem.SubAgencyBean;
-import Controller.Default.Application;
 import DAOs.ATBDBDAOs.KalitaonProductDAOs.*;
 import DAOs.ATBDBDAOs.KalitaonSysDAOs.GsaDAO;
 import DAOs.ATBDBDAOs.KalitaonSysDAOs.SubAgencyDAO;
@@ -24,7 +23,7 @@ import java.time.ZonedDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-import static Controller.Default.Application.errLogger;
+import static Controller.Application.errLogger;
 import static Helper.ProjectProperties.photoSupplierId;
 import static java.time.temporal.ChronoUnit.DAYS;
 

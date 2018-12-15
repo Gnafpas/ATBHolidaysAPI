@@ -2,19 +2,16 @@ package DAOs.ATBDBDAOs.KalitaonHotelDAOs;
 
 import Beans.ATBDBBeans.KalitaonHotel.AccommodationsBean;
 import DBConnection.SunHotelsHibernateUtil;
-import DBConnection.SunHotelsMainServerHibernateUtil;
 import com.mysql.cj.core.exceptions.CJCommunicationsException;
 import javax.xml.ws.WebServiceException;
 import org.hibernate.HibernateException;
-
-import org.hibernate.Transaction;
 
 import javax.persistence.NoResultException;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.util.List;
 
-import static Controller.Default.Application.errLogger;
+import static Controller.Application.errLogger;
 import org.hibernate.StatelessSession;
 
 /**

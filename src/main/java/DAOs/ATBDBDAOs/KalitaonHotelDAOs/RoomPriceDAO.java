@@ -5,7 +5,6 @@ import DBConnection.SunHotelsHibernateUtil;
 import com.mysql.cj.core.exceptions.CJCommunicationsException;
 import javax.xml.ws.WebServiceException;
 import org.hibernate.HibernateException;
-import org.hibernate.Session;
 import org.hibernate.StatelessSession;
 
 import javax.persistence.NoResultException;
@@ -13,7 +12,7 @@ import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.util.List;
 
-import static Controller.Default.Application.errLogger;
+import static Controller.Application.errLogger;
 
 /**
  * Created by George on 08/05/2018.

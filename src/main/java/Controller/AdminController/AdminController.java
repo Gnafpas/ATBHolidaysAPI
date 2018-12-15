@@ -2,24 +2,16 @@ package Controller.AdminController;
 
 import Beans.ATBDBBeans.KalitaonSystem.CityCodeBean;
 import Beans.ATBDBBeans.KalitaonSystem.CountryCodeBean;
-import Beans.HereAPIBeans.ReverseGeocodeResponse;
-import Beans.TourCMSAPIBeans.RateLimitStatusBean;
 import Beans.TravelGateXBeans.ResponseAPIJSON;
 import Beans.ViatorDBBeans.ViatorDestinationsBean;
 import Beans.ViatorDBBeans.ViatorNoneAvailableDatesBean;
 import DAOs.ATBDBDAOs.KalitaonSysDAOs.CityCodeDAO;
 import DAOs.ATBDBDAOs.KalitaonSysDAOs.CountryCodeDAO;
-import DAOs.GoogleAPIDAOs.HereAPIDAO;
-import DAOs.HotelBedsAPIDAOs.HotelAPIDAO;
-import DAOs.TourCMSAPIDAOs.RateLimitStatus;
-import DAOs.TravelGateXDAOs.CurlRequest;
 import DAOs.TravelGateXDAOs.StaticContentDAOs;
 import DAOs.ViatorDBDAOs.ViatorDestinationsDAO;
 import DAOs.ViatorDBDAOs.ViatorNoneAvailableDatesDAO;
 import Updates.ATBDBUpdates.EventsTravelDBUpdates.UpdateEventsTravelDBTimerTask;
 import Updates.ATBDBUpdates.HotelBedsDBUpdates.UpdateHotelBedsDBTimerTask;
-import Updates.ATBDBUpdates.JuniperDBUpdates.UpdateJuniperDB;
-import Updates.ATBDBUpdates.TravelXGateUpdates.UpdateTravelXGateDB;
 import Updates.ATBDBUpdates.ViatorContentUpdates.UpdateATBDBTimerTask;
 import DAOs.ATBDBDAOs.KalitaonSysDAOs.SubAgencyDAO;
 import Updates.ATBDBUpdates.SunHotelsDBUpdates.UpdateSunHotelsDBTimerTask;
@@ -36,7 +28,7 @@ import java.security.NoSuchAlgorithmException;
 import java.util.*;
 import java.util.logging.Logger;
 
-import static Controller.Default.Application.errLogger;
+import static Controller.Application.errLogger;
 
 /**
  * Created by George on 29/05/17.

@@ -8,12 +8,11 @@ import org.hibernate.StatelessSession;
 import org.hibernate.Transaction;
 
 import javax.persistence.NoResultException;
-import javax.persistence.Query;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.util.List;
 
-import static Controller.Default.Application.errLogger;
+import static Controller.Application.errLogger;
 
 /**
  * Created by George on 20/08/2017.

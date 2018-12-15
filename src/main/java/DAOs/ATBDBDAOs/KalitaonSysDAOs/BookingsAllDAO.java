@@ -17,7 +17,7 @@ import java.time.ZonedDateTime;
 import java.util.Date;
 import java.util.List;
 
-import static Controller.Default.Application.errLogger;
+import static Controller.Application.errLogger;
 
 /**
  * Created by George on 26/01/2018.

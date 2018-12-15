@@ -19,17 +19,14 @@ import org.hibernate.StatelessSession;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.math.BigDecimal;
-import java.math.RoundingMode;
 import java.time.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.ExecutionException;
 
-import static Controller.Default.Application.errLogger;
+import static Controller.Application.errLogger;
 import static Helper.ProjectProperties.hotelBedsDeafultCurrency;
 import static Helper.ProjectProperties.hotelBedsProviderId;
-import static java.math.RoundingMode.HALF_UP;
 
 /**
  * Created by George on 21/03/2018.

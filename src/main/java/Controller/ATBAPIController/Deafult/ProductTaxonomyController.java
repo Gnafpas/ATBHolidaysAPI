@@ -6,7 +6,6 @@ import Beans.ATBDBBeans.KalitaonProduct.ProductCategoriesBean;
 import Beans.ATBDBBeans.KalitaonSystem.AllLanguageBean;
 import Beans.ATBDBBeans.KalitaonSystem.CityCodeBean;
 import Beans.ATBDBBeans.KalitaonSystem.CountryCodeBean;
-import Controller.Default.Application;
 import DAOs.ATBDBDAOs.KalitaonProductDAOs.AProductTitleDAO;
 import DAOs.ATBDBDAOs.KalitaonProductDAOs.ProductCategoriesDAO;
 import DAOs.ATBDBDAOs.KalitaonSysDAOs.AllLanguageDAO;
@@ -24,7 +23,7 @@ import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
-import static Controller.Default.Application.errLogger;
+import static Controller.Application.errLogger;
 
 /**
  * Created by George on 15/09/2017.

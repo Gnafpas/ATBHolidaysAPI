@@ -3,7 +3,6 @@ package Controller.ATBAPIController.Deafult;
 import APIJSONs.ATBAPIJSONs.Destination;
 import APIJSONs.ATBAPIJSONs.DestinationJSON;
 import Beans.ATBDBBeans.KalitaonHotel.DestinationBean;
-import Controller.Default.Application;
 import DAOs.ATBDBDAOs.KalitaonHotelDAOs.DestinationDAO;
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
@@ -16,7 +15,7 @@ import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
-import static Controller.Default.Application.errLogger;
+import static Controller.Application.errLogger;
 
 /**
  * Created by George on 09/12/2017.

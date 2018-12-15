@@ -8,8 +8,6 @@ import APIJSONs.ATBAPIJSONs.HotelATBFrontEnd.SunHotelsResponse;
 import APIJSONs.ATBAPIJSONs.HotelATBFrontEnd.SunHotelsSearchPOST;
 import Beans.ATBDBBeans.KalitaonHotel.*;
 import DAOs.ATBDBDAOs.KalitaonHotelDAOs.*;
-import DAOs.ATBDBDAOs.KalitaonProductDAOs.AProductTitleDAO;
-import DAOs.SunHotelsAPIDAOs.RoomMeal;
 import Helper.CurrencyConverter;
 import org.hibernate.StatelessSession;
 import java.io.PrintWriter;
@@ -20,10 +18,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
 
-import static Controller.Default.Application.errLogger;
+import static Controller.Application.errLogger;
 import static Helper.ProjectProperties.atbHotelsProvider;
 import static Helper.ProjectProperties.mattHotelsProvider;
-import static Helper.ProjectProperties.sanHotelsProviderId;
 
 /**
  * Created by George on 06/05/2018.

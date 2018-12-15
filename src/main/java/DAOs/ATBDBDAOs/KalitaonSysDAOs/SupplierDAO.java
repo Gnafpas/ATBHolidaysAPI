@@ -1,18 +1,14 @@
 package DAOs.ATBDBDAOs.KalitaonSysDAOs;
 
-import Beans.ATBDBBeans.KalitaonSystem.CityCodeBean;
-import DBConnection.ATBHibernateUtil;
 import DBConnection.ATBSysHibernateUtil;
 import com.mysql.cj.core.exceptions.CJCommunicationsException;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
-import org.hibernate.StatelessSession;
 import Beans.ATBDBBeans.KalitaonSystem.SupplierBean;
 import java.io.PrintWriter;
 import java.io.StringWriter;
-import java.util.List;
 
-import static Controller.Default.Application.errLogger;
+import static Controller.Application.errLogger;
 
 public class SupplierDAO {
 

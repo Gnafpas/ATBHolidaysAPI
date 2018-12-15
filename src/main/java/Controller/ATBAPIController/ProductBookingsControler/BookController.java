@@ -14,7 +14,6 @@ import Beans.ViatorAPIBeans.Bookings.CalculatePrice.*;
 import Beans.ViatorAPIBeans.Bookings.CalculatePrice.CalculatePricePOST;
 import Beans.ViatorDBBeans.BookLogBean;
 import Beans.ViatorDBBeans.ViatorProductTourGradeLanguageServicesBean;
-import Controller.Default.Application;
 import Controller.EventsTravelController.EventsTravelController;
 import DAOs.ATBDBDAOs.KalitaonProductDAOs.*;
 import DAOs.ATBDBDAOs.KalitaonSysDAOs.*;
@@ -25,7 +24,6 @@ import DAOs.ViatorDBDAOs.ViatorProductTourGradeLanguageServicesDAO;
 import Helper.CurrencyConverter;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.apache.http.client.utils.DateUtils;
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
 import org.joda.time.LocalDate;
@@ -33,21 +31,17 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
-import javax.xml.datatype.XMLGregorianCalendar;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.sql.Timestamp;
-import java.text.DateFormat;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.Locale;
 
-import static Controller.Default.Application.errLogger;
+import static Controller.Application.errLogger;
 import static Helper.ProjectProperties.defaultCurrencyCode;
 import static Helper.ProjectProperties.viatorComission;
 

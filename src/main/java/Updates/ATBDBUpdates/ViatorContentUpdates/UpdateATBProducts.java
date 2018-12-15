@@ -29,7 +29,7 @@ import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
 import static Controller.AdminController.AdminController.atbimidiateUpdateStop;
-import static Controller.Default.Application.errLogger;
+import static Controller.Application.errLogger;
 import static Helper.ProjectProperties.viatorComission;
 
 /**

@@ -25,8 +25,7 @@ import java.util.ArrayList;
 import java.util.GregorianCalendar;
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
-import static Controller.Default.Application.errLogger;
-import static Controller.Default.Application.userlogs;
+import static Controller.Application.errLogger;
 import static Helper.ProjectProperties.*;
 
 /**

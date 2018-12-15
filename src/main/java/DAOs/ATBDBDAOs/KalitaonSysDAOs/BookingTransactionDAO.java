@@ -9,7 +9,7 @@ import org.hibernate.Session;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 
-import static Controller.Default.Application.errLogger;
+import static Controller.Application.errLogger;
 
 /**
  * Created by George on 26/01/2018.

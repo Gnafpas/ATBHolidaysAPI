@@ -6,7 +6,6 @@ import Beans.ATBDBBeans.KalitaonSystem.*;
 import Beans.ViatorAPIBeans.Bookings.Cancel.CancelAPIJSON;
 import Beans.ViatorAPIBeans.Bookings.Cancel.CancelItem;
 import Beans.ViatorAPIBeans.Bookings.Cancel.CancelPOST;
-import Controller.Default.Application;
 import DAOs.ATBDBDAOs.KalitaonProductDAOs.BProductDetailDAO;
 import DAOs.ATBDBDAOs.KalitaonSysDAOs.*;
 import DAOs.ViatorAPIDAOs.BookingsAPIDAO;
@@ -28,7 +27,7 @@ import java.time.ZonedDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-import static Controller.Default.Application.errLogger;
+import static Controller.Application.errLogger;
 
 /**
  * Created by George on 02/03/2018.

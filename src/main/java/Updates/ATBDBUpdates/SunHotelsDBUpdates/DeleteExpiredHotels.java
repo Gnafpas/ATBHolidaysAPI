@@ -1,7 +1,6 @@
 package Updates.ATBDBUpdates.SunHotelsDBUpdates;
 
 import Beans.ATBDBBeans.KalitaonHotel.HotelBean;
-import Controller.Default.Application;
 import DAOs.ATBDBDAOs.KalitaonHotelDAOs.*;
 import DAOs.SunHotelsAPIDAOs.GetStaticHotelsAndRoomsResult;
 import DAOs.SunHotelsAPIDAOs.NonStaticXMLAPI;
@@ -9,7 +8,6 @@ import DAOs.SunHotelsAPIDAOs.NonStaticXMLAPISoap;
 import DBConnection.SunHotelsHibernateUtil;
 import DBConnection.SunHotelsMainServerHibernateUtil;
 import Helper.ProjectProperties;
-import org.hibernate.Session;
 import org.hibernate.StatelessSession;
 import org.hibernate.Transaction;
 import java.util.ArrayList;

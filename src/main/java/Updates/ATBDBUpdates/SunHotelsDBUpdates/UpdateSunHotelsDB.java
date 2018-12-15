@@ -2,15 +2,7 @@ package Updates.ATBDBUpdates.SunHotelsDBUpdates;
 
 
 import Beans.ATBDBBeans.KalitaonHotel.*;
-import Beans.GoogleAPIBeans.AddressComponent;
-import Beans.GoogleAPIBeans.ReverseGeoCodeResponse;
-import Beans.HereAPIBeans.ReverseGeocodeResponse;
-import Beans.HereAPIBeans.View;
 import Controller.AdminController.AdminController;
-import DAOs.GoogleAPIDAOs.HereAPIDAO;
-import DAOs.GoogleAPIDAOs.ReverseGeoCodeAPIDAO;
-import DAOs.JuniperAPIDAOs.StaticDataTransactions;
-import DAOs.JuniperAPIDAOs.WebServiceJP;
 import DAOs.SunHotelsAPIDAOs.*;
 import DAOs.ATBDBDAOs.KalitaonHotelDAOs.*;
 import DBConnection.SunHotelsHibernateUtil;
@@ -22,12 +14,11 @@ import org.hibernate.StatelessSession;
 import org.hibernate.Transaction;
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
-import javax.xml.ws.WebServiceException;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.math.BigDecimal;
-import java.net.ConnectException;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
@@ -36,10 +27,8 @@ import java.util.logging.Handler;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 import static Controller.AdminController.AdminController.sunHotelsimidiateUpdateStop;
-import static Controller.Default.Application.errLogger;
-import static Helper.ProjectProperties.localImagesURL;
+import static Controller.Application.errLogger;
 import static Helper.ProjectProperties.sanHotelsProviderId;
-import static Helper.StoreImage.saveImage;
 
 /**
  * Created by George on 21/11/2017.

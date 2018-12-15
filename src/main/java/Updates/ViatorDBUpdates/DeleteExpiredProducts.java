@@ -2,7 +2,6 @@ package Updates.ViatorDBUpdates;
 
 import Beans.ViatorAPIBeans.ProductsByCodes.ProductsByCodesAPIJSON;
 import Beans.ViatorAPIBeans.ProductsByCodes.ProductsByCodesPOST;
-import Controller.Default.Application;
 import DAOs.ViatorAPIDAOs.ProductAPIDAO;
 import DAOs.ViatorDBDAOs.*;
 import DBConnection.HibernateUtil;
@@ -10,7 +9,6 @@ import Helper.ProjectProperties;
 import Beans.ViatorDBBeans.UpdateDBBeans.TotalExpiredProducts;
 import com.mysql.cj.core.exceptions.CJCommunicationsException;
 import org.hibernate.HibernateException;
-import org.hibernate.Session;
 import org.hibernate.StatelessSession;
 import org.hibernate.Transaction;
 
@@ -20,7 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
-import static Controller.Default.Application.errLogger;
+import static Controller.Application.errLogger;
 
 /**
  * Created by George on 27/06/2017.

@@ -1,16 +1,12 @@
 package Updates.ViatorDBUpdates;
 
-import Beans.ViatorAPIBeans.Bookings.AvailabilityAndPricingMatrix.PricingMatrix;
-import Beans.ViatorDBBeans.UpdateDBBeans.TotalExpiredProducts;
 import Beans.ViatorDBBeans.ViatorNoneAvailableDatesBean;
 import Beans.ViatorDBBeans.ViatorPricingMatrixBean;
-import Beans.ViatorDBBeans.ViatorUpdateFailedProductsBean;
 import Beans.ViatorDBBeans.ViatorUpdateProductsInfoBean;
 import DAOs.ViatorDBDAOs.*;
 import DBConnection.HibernateUtil;
 import com.mysql.cj.core.exceptions.CJCommunicationsException;
 import org.hibernate.HibernateException;
-import org.hibernate.Session;
 import org.hibernate.StatelessSession;
 import org.hibernate.Transaction;
 
@@ -21,7 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
-import static Controller.Default.Application.errLogger;
+import static Controller.Application.errLogger;
 
 /**
  * Created by George on 02/11/2017.

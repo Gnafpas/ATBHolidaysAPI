@@ -2,30 +2,21 @@ package Controller.ATBFrontEndAPI;
 
 
 import APIJSONs.ATBAPIJSONs.HotelATBFrontEnd.*;
-import APIJSONs.ATBAPIJSONs.HotelATBFrontEnd.RoomsAndRoomTypes.SunHotelsCancelationPolicy;
 import APIJSONs.ATBAPIJSONs.HotelATBFrontEnd.RoomsAndRoomTypes.SunHotelsRoomMealResponse;
 import APIJSONs.ATBAPIJSONs.HotelATBFrontEnd.RoomsAndRoomTypes.SunHotelsRoomResponse;
 import APIJSONs.ATBAPIJSONs.HotelATBFrontEnd.RoomsAndRoomTypes.SunHotelsRoomTypeWithRoomsResponse;
-import APIJSONs.ATBAPIJSONs.Product.ResponseItem;
 import APIJSONs.ATBAPIJSONs.ViatorATBFrontEnd.Book.EventsTravelBookPOST;
-import APIJSONs.ATBAPIJSONs.ViatorATBFrontEnd.Book.ViatorItem;
-import APIJSONs.ATBAPIJSONs.ViatorATBFrontEnd.Book.ViatorBookPOST;
-import APIJSONs.ATBAPIJSONs.ViatorATBFrontEnd.Book.ViatorTraveller;
 import Beans.ATBDBBeans.KalitaonHotel.*;
 import Beans.ATBDBBeans.KalitaonProduct.AProductTitleBean;
 import Beans.ATBDBBeans.KalitaonProduct.FPricePlanBean;
 import Beans.ATBDBBeans.KalitaonProduct.GPriceMatrixBean;
-import Beans.ATBDBBeans.KalitaonSystem.GsaBean;
 import Beans.ATBDBBeans.KalitaonSystem.SubAgencyBean;
 import Beans.EventsTravelAPIBeans.EventsTravelCreateOrderRequest;
 import Beans.EventsTravelAPIBeans.EventsTravelCreateOrderResponse;
-import Beans.EventsTravelAPIBeans.EventsTravelProductsRespone;
 import Beans.EventsTravelAPIBeans.OrderProduct;
 import Beans.HotelBedsAPIBeans.Availability.*;
-import Beans.HotelBedsAPIBeans.Availability.Hotel;
 import Beans.HotelBedsAPIBeans.Availability.Pax;
 import Beans.HotelBedsAPIBeans.Availability.Rate;
-import Beans.HotelBedsAPIBeans.Availability.Room;
 import Beans.HotelBedsAPIBeans.Book.*;
 import Beans.ViatorAPIBeans.Bookings.Book.*;
 import Beans.ViatorAPIBeans.Bookings.Book.BookAPIJSON;
@@ -35,12 +26,10 @@ import Beans.ViatorAPIBeans.Bookings.PastBooking.PastBookingAPIJSON;
 import Beans.ViatorDBBeans.BookLogBean;
 import Beans.ViatorDBBeans.PrebookLogBean;
 import Beans.ViatorDBBeans.ViatorProductTourGradeLanguageServicesBean;
-import Controller.Default.Application;
 import DAOs.ATBDBDAOs.KalitaonHotelDAOs.*;
 import DAOs.ATBDBDAOs.KalitaonProductDAOs.AProductTitleDAO;
 import DAOs.ATBDBDAOs.KalitaonProductDAOs.FPricePlanDAO;
 import DAOs.ATBDBDAOs.KalitaonProductDAOs.GPriceMatrixDAO;
-import DAOs.ATBDBDAOs.KalitaonSysDAOs.GsaDAO;
 import DAOs.ATBDBDAOs.KalitaonSysDAOs.SubAgencyDAO;
 import DAOs.EventsTravelAPIDAO.EventsTravelProductsAPIDAO;
 import DAOs.HotelBedsAPIDAOs.AvailabilityDAOs;
@@ -76,8 +65,8 @@ import java.util.List;
 import java.util.concurrent.*;
 import java.util.regex.Pattern;
 
-import static Controller.Default.Application.errLogger;
-import static Controller.Default.Application.userlogs;
+import static Controller.Application.errLogger;
+import static Controller.Application.userlogs;
 import static Helper.ProjectProperties.*;
 
 /**

@@ -2,15 +2,11 @@ package Updates.ATBDBUpdates.HotelBedsDBUpdates;
 
 import Beans.ATBDBBeans.KalitaonHotel.HotelBean;
 import Beans.HotelBedsAPIBeans.Hotels.HotelsAPIJSON;
-import Controller.Default.Application;
 import DAOs.ATBDBDAOs.KalitaonHotelDAOs.HotelDAO;
-import DAOs.ATBDBDAOs.KalitaonHotelDAOs.HotelmappingDAO;
 import DAOs.HotelBedsAPIDAOs.HotelAPIDAO;
 import DBConnection.SunHotelsHibernateUtil;
-import DBConnection.SunHotelsMainServerHibernateUtil;
 import Helper.ProjectProperties;
 import Updates.ATBDBUpdates.SunHotelsDBUpdates.TotalExpiredHotels;
-import org.hibernate.Session;
 import org.hibernate.StatelessSession;
 import org.hibernate.Transaction;
 

@@ -1,6 +1,5 @@
 package DAOs.HotelBedsAPIDAOs;
 
-import Beans.HotelBedsAPIBeans.Availability.AvailabilityAPIJSON;
 import Beans.HotelBedsAPIBeans.Book.BookAPIJSON;
 import Beans.HotelBedsAPIBeans.Book.BookPost;
 import Beans.HotelBedsAPIBeans.Book.CheckRateAPIJSON;
@@ -14,7 +13,7 @@ import org.springframework.web.client.HttpServerErrorException;
 import org.springframework.web.client.ResourceAccessException;
 import org.springframework.web.client.RestTemplate;
 
-import static Controller.Default.Application.errLogger;
+import static Controller.Application.errLogger;
 import static Helper.ProjectProperties.hotelBedsApiKey;
 import static Helper.ProjectProperties.hotelBedsSecret;
 

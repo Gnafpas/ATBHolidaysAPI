@@ -2,19 +2,17 @@ package DAOs.ATBDBDAOs.KalitaonSysDAOs;
 
 import Beans.ATBDBBeans.KalitaonSystem.SubAgencyBean;
 import DBConnection.ATBSysHibernateUtil;
-import DBConnection.SunHotelsHibernateUtil;
 import com.mysql.cj.core.exceptions.CJCommunicationsException;
 import javax.xml.ws.WebServiceException;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
-import org.hibernate.StatelessSession;
 import org.hibernate.Transaction;
 
 import javax.persistence.NoResultException;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 
-import static Controller.Default.Application.errLogger;
+import static Controller.Application.errLogger;
 
 /**
  * Created by George on 30/09/2017.

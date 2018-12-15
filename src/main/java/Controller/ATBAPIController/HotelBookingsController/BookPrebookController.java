@@ -18,7 +18,6 @@ import Beans.HotelBedsAPIBeans.Book.CheckRatePost;
 import Beans.HotelBedsAPIBeans.Book.Holder;
 import Beans.HotelBedsAPIBeans.Book.RateKey;
 import Beans.ViatorDBBeans.BookLogBean;
-import Controller.Default.Application;
 import DAOs.ATBDBDAOs.KalitaonHotelDAOs.*;
 import DAOs.ATBDBDAOs.KalitaonLogDAOs.PrebookLogDAO;
 import DAOs.ATBDBDAOs.KalitaonSysDAOs.*;
@@ -45,7 +44,7 @@ import java.util.*;
 import java.sql.Timestamp;
 import java.util.regex.Pattern;
 
-import static Controller.Default.Application.errLogger;
+import static Controller.Application.errLogger;
 import static Helper.ProjectProperties.*;
 
 /**

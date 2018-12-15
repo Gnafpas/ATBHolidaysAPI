@@ -2,21 +2,17 @@ package DAOs.HotelBedsAPIDAOs;
 
 import Beans.HotelBedsAPIBeans.Availability.AvailabilityAPIJSON;
 import Beans.HotelBedsAPIBeans.Availability.AvailabilityPOST;
-import Beans.ViatorAPIBeans.Bookings.Book.BookAPIJSON;
 import Helper.ProjectProperties;
 
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpMethod;
 import org.springframework.http.client.SimpleClientHttpRequestFactory;
-import org.springframework.util.LinkedMultiValueMap;
-import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.HttpServerErrorException;
 import org.springframework.web.client.ResourceAccessException;
 import org.springframework.web.client.RestTemplate;
 
-import static Controller.Default.Application.errLogger;
+import static Controller.Application.errLogger;
 import static Helper.ProjectProperties.hotelBedsApiKey;
 import static Helper.ProjectProperties.hotelBedsSecret;
 

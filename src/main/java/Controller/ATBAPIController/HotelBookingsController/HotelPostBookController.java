@@ -9,7 +9,6 @@ import APIJSONs.ATBAPIJSONs.Hotel.RoomsAndRoomTypes.CancelationPolicyResponse;
 import Beans.ATBDBBeans.KalitaonHotel.MealBean;
 import Beans.ATBDBBeans.KalitaonLog.PrebookLogBean;
 import Beans.ATBDBBeans.KalitaonSystem.*;
-import Controller.Default.Application;
 import DAOs.ATBDBDAOs.KalitaonHotelDAOs.MealDAO;
 import DAOs.ATBDBDAOs.KalitaonLogDAOs.PrebookLogDAO;
 import DAOs.ATBDBDAOs.KalitaonSysDAOs.*;
@@ -35,7 +34,7 @@ import java.util.ArrayList;
 import java.util.GregorianCalendar;
 import java.util.List;
 
-import static Controller.Default.Application.errLogger;
+import static Controller.Application.errLogger;
 import static Helper.ProjectProperties.sanHotelsProviderId;
 import static Helper.ProjectProperties.sunhotelsUsername;
 import static Helper.ProjectProperties.sunhotelspass;

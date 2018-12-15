@@ -7,21 +7,10 @@ import APIJSONs.ATBAPIJSONs.HotelATBFrontEnd.RoomsAndRoomTypes.SunHotelsRoomType
 import APIJSONs.ATBAPIJSONs.HotelATBFrontEnd.SunHotelsResponse;
 import APIJSONs.ATBAPIJSONs.HotelATBFrontEnd.SunHotelsSearchPOST;
 import Beans.ATBDBBeans.KalitaonHotel.*;
-import Beans.GoogleAPIBeans.AddressComponent;
-import Beans.GoogleAPIBeans.Result;
-import Beans.GoogleAPIBeans.ReverseGeoCodeResponse;
-import Beans.HereAPIBeans.ReverseGeocodeResponse;
-import Beans.HereAPIBeans.View;
-import Beans.HotelBedsAPIBeans.Availability.*;
-import Beans.HotelBedsAPIBeans.Availability.Hotel;
-import Beans.HotelBedsAPIBeans.Availability.Room;
 import DAOs.ATBDBDAOs.KalitaonHotelDAOs.HotelDAO;
 import DAOs.ATBDBDAOs.KalitaonHotelDAOs.HotelmappingDAO;
 import DAOs.ATBDBDAOs.KalitaonHotelDAOs.MealDAO;
 import DAOs.ATBDBDAOs.KalitaonHotelDAOs.RoomtypeDAO;
-import DAOs.GoogleAPIDAOs.HereAPIDAO;
-import DAOs.GoogleAPIDAOs.ReverseGeoCodeAPIDAO;
-import DAOs.HotelBedsAPIDAOs.AvailabilityDAOs;
 import DAOs.SunHotelsAPIDAOs.*;
 import org.hibernate.StatelessSession;
 
@@ -30,15 +19,13 @@ import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.XMLGregorianCalendar;
 import java.io.PrintWriter;
 import java.io.StringWriter;
-import java.math.BigDecimal;
 import java.time.ZonedDateTime;
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
 import java.util.List;
-import java.util.concurrent.Callable;
 import java.util.concurrent.CountDownLatch;
 
-import static Controller.Default.Application.errLogger;
+import static Controller.Application.errLogger;
 import static Helper.ProjectProperties.*;
 import static Helper.ProjectProperties.sanHotelsProviderId;
 

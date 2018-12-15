@@ -1,7 +1,6 @@
 package Updates.ATBDBUpdates.ViatorContentUpdates;
 
 import Beans.ATBDBBeans.KalitaonProduct.AProductTitleBean;
-import Controller.Default.Application;
 import DAOs.ATBDBDAOs.KalitaonProductDAOs.*;
 import DAOs.ViatorDBDAOs.*;
 import Beans.ViatorDBBeans.UpdateDBBeans.TotalExpiredProducts;

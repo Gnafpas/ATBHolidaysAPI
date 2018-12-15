@@ -1,10 +1,6 @@
 package Updates.ATBDBUpdates.HotelBedsDBUpdates;
 
 import Beans.ATBDBBeans.KalitaonHotel.*;
-import Beans.GoogleAPIBeans.AddressComponent;
-import Beans.GoogleAPIBeans.ReverseGeoCodeResponse;
-import Beans.HereAPIBeans.ReverseGeocodeResponse;
-import Beans.HereAPIBeans.View;
 import Beans.HotelBedsAPIBeans.Destiantions.Destination;
 import Beans.HotelBedsAPIBeans.Destiantions.DestinationsAPIJSON;
 import Beans.HotelBedsAPIBeans.Hotels.Hotel;
@@ -13,8 +9,6 @@ import Beans.HotelBedsAPIBeans.Hotels.Image;
 import Beans.HotelBedsAPIBeans.Types.*;
 import Controller.AdminController.AdminController;
 import DAOs.ATBDBDAOs.KalitaonHotelDAOs.*;
-import DAOs.GoogleAPIDAOs.HereAPIDAO;
-import DAOs.GoogleAPIDAOs.ReverseGeoCodeAPIDAO;
 import DAOs.HotelBedsAPIDAOs.DestinationsAPIDAO;
 import DAOs.HotelBedsAPIDAOs.HotelAPIDAO;
 import DAOs.HotelBedsAPIDAOs.TypesAPIDAO;
@@ -40,9 +34,8 @@ import java.util.logging.Handler;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
-import static Controller.AdminController.AdminController.hotelBedsUpdateRunning;
 import static Controller.AdminController.AdminController.hotelBedsimidiateUpdateStop;
-import static Controller.Default.Application.errLogger;
+import static Controller.Application.errLogger;
 import static Helper.ProjectProperties.hotelBedsImageURL;
 import static Helper.ProjectProperties.hotelBedsProviderId;
 

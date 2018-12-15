@@ -1,6 +1,5 @@
 package Helper;
 
-import Controller.Default.Application;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 

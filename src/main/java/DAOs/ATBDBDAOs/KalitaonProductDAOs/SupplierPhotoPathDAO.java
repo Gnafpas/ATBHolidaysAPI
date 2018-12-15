@@ -13,7 +13,7 @@ import javax.persistence.Query;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 
-import static Controller.Default.Application.errLogger;
+import static Controller.Application.errLogger;
 
 /**
  * Created by George on 05/10/2017.

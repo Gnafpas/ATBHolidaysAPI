@@ -1,4 +1,4 @@
-package Controller.Default;
+package Controller;
 
 import Helper.CustomErrLogger;
 import Helper.CustomInfoLogger;
@@ -11,7 +11,6 @@ import java.util.logging.FileHandler;
 import java.util.logging.Handler;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
-import com.instrumentalapp.*;
 
 
 /**

@@ -4,15 +4,13 @@ import Beans.ViatorDBBeans.ViatorPricingMatrixBean;
 import DBConnection.HibernateUtil;
 import com.mysql.cj.core.exceptions.CJCommunicationsException;
 import org.hibernate.HibernateException;
-import org.hibernate.Session;
 import org.hibernate.StatelessSession;
-import org.hibernate.Transaction;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.util.List;
 
-import static Controller.Default.Application.errLogger;
+import static Controller.Application.errLogger;
 
 /**
  * Created by George on 19/08/2017.

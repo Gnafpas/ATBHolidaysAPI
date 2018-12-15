@@ -13,10 +13,8 @@ import DAOs.ATBDBDAOs.KalitaonSysDAOs.SupplierDAO;
 import DAOs.EventsTravelAPIDAO.EventsTravelProductsAPIDAO;
 import DBConnection.ATBHibernateUtil;
 import Helper.ProjectProperties;
-import org.apache.log4j.Logger;
 import org.hibernate.StatelessSession;
 import org.hibernate.Transaction;
-import org.joda.time.DateTimeComparator;
 
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
@@ -28,14 +26,13 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
-import java.time.LocalTime;
 import java.time.format.TextStyle;
 import java.util.*;
 import java.util.logging.FileHandler;
 import java.util.logging.Handler;
 import java.util.logging.SimpleFormatter;
 
-import static Controller.Default.Application.errLogger;
+import static Controller.Application.errLogger;
 
 /**
  * Created by George on 10/07/2017.

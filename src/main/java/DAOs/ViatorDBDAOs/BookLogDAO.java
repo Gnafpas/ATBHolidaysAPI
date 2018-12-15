@@ -10,7 +10,7 @@ import org.hibernate.Transaction;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 
-import static Controller.Default.Application.errLogger;
+import static Controller.Application.errLogger;
 
 /**
  * Created by George on 06/04/2018.

@@ -6,8 +6,6 @@ import Beans.ATBDBBeans.KalitaonSystem.*;
 import Beans.ViatorAPIBeans.Bookings.Book.*;
 import Beans.ViatorAPIBeans.Bookings.CalculatePrice.CalculatePriceAPIJSON;
 import Beans.ViatorAPIBeans.Bookings.CalculatePrice.CalculatePricePOST;
-import Controller.Default.Application;
-import Controller.EventsTravelController.EventsTravelController;
 import DAOs.ATBDBDAOs.KalitaonProductDAOs.*;
 import DAOs.ATBDBDAOs.KalitaonSysDAOs.*;
 import DAOs.ViatorAPIDAOs.BookingsAPIDAO;
@@ -26,7 +24,7 @@ import java.math.RoundingMode;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
-import static Controller.Default.Application.errLogger;
+import static Controller.Application.errLogger;
 import static Helper.ProjectProperties.defaultCurrencyCode;
 import static Helper.ProjectProperties.viatorComission;
 

@@ -19,19 +19,13 @@ import APIJSONs.ATBAPIJSONs.Resort;
 import APIJSONs.ATBAPIJSONs.RoomType;
 import APIJSONs.ATBAPIJSONs.Hotel.RoomsAndRoomTypes.*;
 import APIJSONs.ATBAPIJSONs.Hotel.RoomsAndRoomTypes.RoomMealResponse;
-import APIJSONs.ATBAPIJSONs.HotelATBFrontEnd.SunHotelsResponse;
 import Beans.ATBDBBeans.KalitaonHotel.*;
 import Beans.ATBDBBeans.KalitaonSystem.GsaBean;
 import Beans.ATBDBBeans.KalitaonSystem.SubAgencyBean;
-import Controller.ATBFrontEndAPI.*;
-import Controller.ATBFrontEndAPI.HotelBedsSearchThread;
-import Controller.Default.Application;
 import DAOs.ATBDBDAOs.KalitaonHotelDAOs.*;
 import DAOs.ATBDBDAOs.KalitaonSysDAOs.GsaDAO;
 import DAOs.ATBDBDAOs.KalitaonSysDAOs.SubAgencyDAO;
 import DAOs.SunHotelsAPIDAOs.*;
-import DAOs.SunHotelsAPIDAOs.Room;
-import DAOs.SunHotelsAPIDAOs.RoomTypeWithRooms;
 import DBConnection.ATBSysHibernateUtil;
 import DBConnection.SunHotelsHibernateUtil;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -43,9 +37,7 @@ import org.hibernate.StatelessSession;
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
 import org.springframework.web.bind.annotation.*;
-import javax.xml.datatype.DatatypeConfigurationException;
-import javax.xml.datatype.DatatypeFactory;
-import javax.xml.datatype.XMLGregorianCalendar;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.StringWriter;
@@ -59,8 +51,8 @@ import java.util.*;
 import java.util.concurrent.CountDownLatch;
 import java.util.regex.Pattern;
 
-import static Controller.Default.Application.errLogger;
-import static Controller.Default.Application.userlogs;
+import static Controller.Application.errLogger;
+import static Controller.Application.userlogs;
 import static Helper.ProjectProperties.*;
 
 /**
