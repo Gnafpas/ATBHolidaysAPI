@@ -67,6 +67,7 @@ public class HotelController {
        // Application.agent.increment("app.web.request.api.hotel.hotelStaticContent");
         HotelStaticContentJSON hotelSearchJSON = new HotelStaticContentJSON();
         DateTime dateTime = new DateTime(DateTimeZone.UTC);
+        StatelessSession session = SunHotelsHibernateUtil.getSession();
         try {
             hotelSearchJSON.setDateStamp(Timestamp.valueOf(String.format("%04d-%02d-%02d %02d:%02d:%02d",
                     dateTime.getYear(), dateTime.getMonthOfYear(), dateTime.getDayOfMonth(),
@@ -123,7 +124,7 @@ public class HotelController {
              */
             if (hotelsmapping != null) {
                 if (atbhotels != null) {
-                    StatelessSession session = SunHotelsHibernateUtil.getSession();
+
                     session.beginTransaction();
                     for (HotelBean atbhotel : atbhotels) {
                         if (atbhotel.getHotelId() == atbhotel.getHotelId()) {
@@ -240,7 +241,7 @@ public class HotelController {
                             }
                         }
                     }
-                    session.close();
+
                 }
             }
             hotelSearchJSON.setData(hotelsResponse);
@@ -274,6 +275,8 @@ public class HotelController {
             errLogger.info(errors.toString());
             hotelSearchJSON.setSuccess(false);
             hotelSearchJSON.setErrorMessageText(errors.toString());
+        }finally {
+            session.close();
         }
         return hotelSearchJSON;
     }
@@ -1039,8 +1042,7 @@ public class HotelController {
 
                         }
 
-                        systemDBSession.close();
-                        session.close();
+
 
                         ApiUsrSearchLogBean stroreSearchLogBean = new ApiUsrSearchLogBean();
                         stroreSearchLogBean.setSearchId(params.getSearchId());
@@ -1115,6 +1117,9 @@ public class HotelController {
             errLogger.info(errors.toString());
             hotelSearchJSON.setSuccess(false);
             hotelSearchJSON.setErrorMessageText(errors.toString());
+        }finally {
+            systemDBSession.close();
+            session.close();
         }
         return hotelSearchJSON;
 

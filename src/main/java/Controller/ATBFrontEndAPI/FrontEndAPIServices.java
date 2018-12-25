@@ -2363,7 +2363,7 @@ public class FrontEndAPIServices {
 //                        requestTimeElapsed = requestTimeElapsed + travelGateXSearchThread.getTravelGateXSearchRequestResponse().getRequestTimeElapsed();
 //                    }
 
-                    session.close();
+
 
 
                     /**
@@ -2614,6 +2614,8 @@ public class FrontEndAPIServices {
                     StringWriter errors = new StringWriter();
                     e.printStackTrace(new PrintWriter(errors));
                     errLogger.info(errors.toString());
+                }finally {
+                    session.close();
                 }
 
       //      }});
