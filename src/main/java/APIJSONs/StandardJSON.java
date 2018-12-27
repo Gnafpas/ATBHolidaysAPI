@@ -7,6 +7,8 @@ import org.joda.time.DateTime;
  */
 public class StandardJSON {
 
+
+
     private String errorMessageText=null;
     private boolean success=true;
     private int totalCount=0;
