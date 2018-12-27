@@ -57,6 +57,8 @@ public class AdminController {
     public static boolean hotelBedsUpdateRunning=false;
     public static boolean eventsTravelUpdateRunning=false;
 
+
+
     /**
      * All functions return results about the update.If there were errors in communication with viator server or DB
      * How many products added/updated  to DB,which products failed  due to communication with
