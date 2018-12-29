@@ -6,7 +6,6 @@ import DAOs.SunHotelsAPIDAOs.GetStaticHotelsAndRoomsResult;
 import DAOs.SunHotelsAPIDAOs.NonStaticXMLAPI;
 import DAOs.SunHotelsAPIDAOs.NonStaticXMLAPISoap;
 import DBConnection.SunHotelsHibernateUtil;
-import DBConnection.SunHotelsMainServerHibernateUtil;
 import Helper.ProjectProperties;
 import org.hibernate.StatelessSession;
 import org.hibernate.Transaction;
@@ -75,20 +74,16 @@ public class DeleteExpiredHotels {
                             if (expired) {
                                 StatelessSession session = SunHotelsHibernateUtil.getSession();
                                 Transaction tx;
-                                StatelessSession session2 = SunHotelsMainServerHibernateUtil.getSession();
                                 Transaction tx2;
                                 tx = session.beginTransaction();
-                                tx2 = session2.beginTransaction();
                                 List<HotelBean> hotels=HotelDAO.getHotelByHotelId(hotelId,sanHotelsProviderId,null);
                                 if (hotels!=null && hotels.size()>0 && hotels.get(0).isActive()){
                                     hotels.get(0).setActive(false);
-                                    if(HotelDAO.updateHotelBean(hotels.get(0),session,session2))
+                                    if(HotelDAO.updateHotelBean(hotels.get(0),session,null))
                                         totalExpiredHotels.setAtbDBErrCommCounter(totalExpiredHotels.getAtbDBErrCommCounter() + 1);
                                 }
                                 tx.commit();
-                                tx2.commit();
                                 session.close();
-                                session2.close();
                                 logger.info("********************** Deleting expired hotel with id: " + hotelId + " **********************");
                                 totalExpiredHotelsList.add(hotelId);
                                 totalExpiredHotels.setTotalExpiredhotels(totalExpiredHotels.getTotalExpiredhotels() + 1);

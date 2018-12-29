@@ -13,7 +13,6 @@ import DAOs.HotelBedsAPIDAOs.DestinationsAPIDAO;
 import DAOs.HotelBedsAPIDAOs.HotelAPIDAO;
 import DAOs.HotelBedsAPIDAOs.TypesAPIDAO;
 import DBConnection.SunHotelsHibernateUtil;
-import DBConnection.SunHotelsMainServerHibernateUtil;
 import Helper.ProjectProperties;
 import Updates.ATBDBUpdates.SunHotelsDBUpdates.TotalExpiredHotels;
 import com.mysql.cj.core.exceptions.CJCommunicationsException;
@@ -195,32 +194,27 @@ public class UpdateHotelBedsDB {
                         roomtypeBean.setSizeMeasurement("");
                         StatelessSession session = SunHotelsHibernateUtil.getSession();
                         Transaction tx;
-                        StatelessSession session2 = SunHotelsMainServerHibernateUtil.getSession();
-                        Transaction tx2;
                         try {
                             tx = session.beginTransaction();
-                            tx2 = session2.beginTransaction();
                             int currentAtbDBErrCommCounter = atbDBErrCommCounter;
 
                             RoomtypeBean existedroomType = RoomtypeDAO.getRoomsTypesbyId(roomtypeBean.getRoomtypeId(), hotelBedsProviderId, session);
                             if (existedroomType != null && existedroomType.getId()!=0) {
                                 roomtypeBean.setId(existedroomType.getId());
-                                if (RoomtypeDAO.updateRoomtypeBean(roomtypeBean, session, session2)) {
+                                if (RoomtypeDAO.updateRoomtypeBean(roomtypeBean, session, null)) {
                                     atbDBErrCommCounter++;
                                 } else
                                     entityCounter++;
                             } else {
-                                if (RoomtypeDAO.addRoomtypeBean(roomtypeBean, session, session2)) {
+                                if (RoomtypeDAO.addRoomtypeBean(roomtypeBean, session, null)) {
                                     atbDBErrCommCounter++;
                                 } else
                                     entityCounter++;
                             }
                             if (currentAtbDBErrCommCounter == atbDBErrCommCounter) {
                                 tx.commit();
-                                tx2.commit();
                             } else {
                                 tx.rollback();
-                                tx2.rollback();
                             }
                         } catch (ExceptionInInitializerError e) {
                             StringWriter errors = new StringWriter();
@@ -239,7 +233,6 @@ public class UpdateHotelBedsDB {
                             atbDBErrCommCounter++;
                         } finally {
                             session.close();
-                            session2.close();
                         }
                     }
                 } else
@@ -268,32 +261,27 @@ public class UpdateHotelBedsDB {
 
                         StatelessSession session = SunHotelsHibernateUtil.getSession();
                         Transaction tx;
-                        StatelessSession session2 = SunHotelsMainServerHibernateUtil.getSession();
-                        Transaction tx2;
                         try {
                             tx = session.beginTransaction();
-                            tx2 = session2.beginTransaction();
                             int currentAtbDBErrCommCounter = atbDBErrCommCounter;
 
                             FacilityBean existedFacility = FacilityDAO.getFacilityByFacilityId(facilityBean.getFacilityId(), hotelBedsProviderId, session);
                             if (existedFacility != null && existedFacility.getId()!=0) {
                                 facilityBean.setId(existedFacility.getId());
-                                if (FacilityDAO.updateFacilityBean(facilityBean, session, session2)) {
+                                if (FacilityDAO.updateFacilityBean(facilityBean, session, null)) {
                                     atbDBErrCommCounter++;
                                 } else
                                     entityCounter++;
                             } else {
-                                if (FacilityDAO.addFacilityBean(facilityBean, session, session2)) {
+                                if (FacilityDAO.addFacilityBean(facilityBean, session, null)) {
                                     atbDBErrCommCounter++;
                                 } else
                                     entityCounter++;
                             }
                             if (currentAtbDBErrCommCounter == atbDBErrCommCounter) {
                                 tx.commit();
-                                tx2.commit();
                             } else {
                                 tx.rollback();
-                                tx2.rollback();
                             }
                         } catch (ExceptionInInitializerError e) {
                             StringWriter errors = new StringWriter();
@@ -312,7 +300,6 @@ public class UpdateHotelBedsDB {
                             atbDBErrCommCounter++;
                         } finally {
                             session.close();
-                            session2.close();
                         }
                     }
                 } else
@@ -340,32 +327,27 @@ public class UpdateHotelBedsDB {
 
                         StatelessSession session = SunHotelsHibernateUtil.getSession();
                         Transaction tx;
-                        StatelessSession session2 = SunHotelsMainServerHibernateUtil.getSession();
-                        Transaction tx2;
                         try {
                             tx = session.beginTransaction();
-                            tx2 = session2.beginTransaction();
                             int currentAtbDBErrCommCounter = atbDBErrCommCounter;
 
                             MealBean existedMeal = MealDAO.getMealByMealId(mealBean.getMealId(), hotelBedsProviderId, session);
                             if (existedMeal != null && existedMeal.getId()!=0) {
                                 mealBean.setId(existedMeal.getId());
-                                if (MealDAO.updateMealBean(mealBean, session, session2)) {
+                                if (MealDAO.updateMealBean(mealBean, session, null)) {
                                     atbDBErrCommCounter++;
                                 } else
                                     entityCounter++;
                             } else {
-                                if (MealDAO.addMealBean(mealBean, session, session2)) {
+                                if (MealDAO.addMealBean(mealBean, session, null)) {
                                     atbDBErrCommCounter++;
                                 } else
                                     entityCounter++;
                             }
                             if (currentAtbDBErrCommCounter == atbDBErrCommCounter) {
                                 tx.commit();
-                                tx2.commit();
                             } else {
                                 tx.rollback();
-                                tx2.rollback();
                             }
                         } catch (ExceptionInInitializerError e) {
                             StringWriter errors = new StringWriter();
@@ -384,7 +366,6 @@ public class UpdateHotelBedsDB {
                             atbDBErrCommCounter++;
                         } finally {
                             session.close();
-                            session2.close();
                         }
                     }
                 } else
@@ -413,32 +394,27 @@ public class UpdateHotelBedsDB {
 
                         StatelessSession session = SunHotelsHibernateUtil.getSession();
                         Transaction tx;
-                        StatelessSession session2 = SunHotelsMainServerHibernateUtil.getSession();
-                        Transaction tx2;
                         try {
                             tx = session.beginTransaction();
-                            tx2 = session2.beginTransaction();
                             int currentAtbDBErrCommCounter = atbDBErrCommCounter;
 
                             AccommodationsBean existedAccommodation = AccommodationsDAO.getAccommodationByAccommodationId(accommodationsBean.getAccommodationId(), hotelBedsProviderId, session);
                             if (existedAccommodation != null  && existedAccommodation.getId()!=0) {
                                 accommodationsBean.setId(existedAccommodation.getId());
-                                if (AccommodationsDAO.updateAccommodationsBean(accommodationsBean, session, session2)) {
+                                if (AccommodationsDAO.updateAccommodationsBean(accommodationsBean, session, null)) {
                                     atbDBErrCommCounter++;
                                 } else
                                     entityCounter++;
                             } else {
-                                if (AccommodationsDAO.addAccommodationsBean(accommodationsBean, session, session2)) {
+                                if (AccommodationsDAO.addAccommodationsBean(accommodationsBean, session, null)) {
                                     atbDBErrCommCounter++;
                                 } else
                                     entityCounter++;
                             }
                             if (currentAtbDBErrCommCounter == atbDBErrCommCounter) {
                                 tx.commit();
-                                tx2.commit();
                             } else {
                                 tx.rollback();
-                                tx2.rollback();
                             }
                         } catch (ExceptionInInitializerError e) {
                             StringWriter errors = new StringWriter();
@@ -457,7 +433,6 @@ public class UpdateHotelBedsDB {
                             atbDBErrCommCounter++;
                         } finally {
                             session.close();
-                            session2.close();
                         }
                     }
                 } else
@@ -597,40 +572,35 @@ public class UpdateHotelBedsDB {
 
                         StatelessSession session = SunHotelsHibernateUtil.getSession();
                         Transaction tx;
-                        StatelessSession session2 = SunHotelsMainServerHibernateUtil.getSession();
-                        Transaction tx2;
                         try {
                             tx = session.beginTransaction();
-                            tx2 = session2.beginTransaction();
                             int currentAtbDBErrCommCounter = atbDBErrCommCounter;
-                            if (HotelDAO.deleteHotelBean(hotelBean.getHotelId(), session, session2, hotelBedsProviderId)) {
+                            if (HotelDAO.deleteHotelBean(hotelBean.getHotelId(), session, null, hotelBedsProviderId)) {
                                 atbDBErrCommCounter++;
                             } else {
-                                if (HotelDAO.addHotelBean(hotelBean, session, session2)) {
+                                if (HotelDAO.addHotelBean(hotelBean, session, null)) {
                                     atbDBErrCommCounter++;
                                 } else {
                                     if (HotelmappingDAO.getATBHotelId(hotelBean.getHotelId(), hotelBedsProviderId, session) == 0) {
-                                        if (HotelmappingDAO.addHotelmapping(hotelBean.getHotelId(), hotelBedsProviderId, session, session2))
+                                        if (HotelmappingDAO.addHotelmapping(hotelBean.getHotelId(), hotelBedsProviderId, session, null))
                                             atbDBErrCommCounter++;
                                     }
                                     entityCounter++;
                                 }
-                                if (RoomDAO.addRoomBean(rooms, session, session2)) {
+                                if (RoomDAO.addRoomBean(rooms, session, null)) {
                                     atbDBErrCommCounter++;
                                 }
-                                if (PhotoDAO.addPhotoBean(photos, session, session2)) {
+                                if (PhotoDAO.addPhotoBean(photos, session, null)) {
                                     atbDBErrCommCounter++;
                                 }
-                                if (HotelfacilityDAO.addHotelfacilityBean(hotelFacilities, session, session2)) {
+                                if (HotelfacilityDAO.addHotelfacilityBean(hotelFacilities, session, null)) {
                                     atbDBErrCommCounter++;
                                 }
                             }
                             if (currentAtbDBErrCommCounter == atbDBErrCommCounter) {
                                 tx.commit();
-                                tx2.commit();
                             } else {
                                 tx.rollback();
-                                tx2.rollback();
                             }
                         } catch (ExceptionInInitializerError e) {
                             StringWriter errors = new StringWriter();
@@ -649,7 +619,6 @@ public class UpdateHotelBedsDB {
                             atbDBErrCommCounter++;
                         } finally {
                             session.close();
-                            session2.close();
                         }
                     }
                 } else
