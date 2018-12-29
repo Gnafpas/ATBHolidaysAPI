@@ -95,16 +95,11 @@ public class DeleteExpiredHotels {
                                     hotelbeans.get(0).setActive(false);
                                     StatelessSession session = SunHotelsHibernateUtil.getSession();
                                     Transaction tx;
-                                  //  StatelessSession session2 = SunHotelsMainServerHibernateUtil.getSession();
-                                   // Transaction tx2;
                                     tx = session.beginTransaction();
-                                   // tx2 = session2.beginTransaction();
                                     if(HotelDAO.updateHotelBean(hotelbeans.get(0),session,null))
                                         totalExpiredHotels.setAtbDBErrCommCounter(totalExpiredHotels.getAtbDBErrCommCounter() + 1);
                                     tx.commit();
-                                   // tx2.commit();
                                     session.close();
-                                  //  session2.close();
                                     logger.info("********************** Deleting expired hotel with id: " + hotelId + " **********************");
                                     totalExpiredHotelsList.add(hotelId);
                                     totalExpiredHotels.setTotalExpiredhotels(totalExpiredHotels.getTotalExpiredhotels() + 1);

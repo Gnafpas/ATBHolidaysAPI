@@ -24,17 +24,12 @@ public class DestinationDAO {
     public static boolean addDestinationBean(DestinationBean destinationBean){
 
         StatelessSession session = SunHotelsHibernateUtil.getSession();
-       // StatelessSession session2 = SunHotelsMainServerHibernateUtil.getSession();
         Transaction tx;
-       // Transaction tx2;
         boolean err=false;
         try{
             tx=session.beginTransaction();
             session.insert(destinationBean);
             tx.commit();
-          //  tx2=session2.beginTransaction();
-          //  session2.insert(destinationBean);
-          //  tx2.commit();
         }catch (HibernateException e) {
             err=true;
             StringWriter errors = new StringWriter();
@@ -57,7 +52,6 @@ public class DestinationDAO {
             errLogger.info(errors.toString());
         }finally {
             session.close();
-         //   session2.close();
         }
         return err;
     }
@@ -65,17 +59,12 @@ public class DestinationDAO {
     public static boolean updateDestinationBean(DestinationBean destinationBean){
 
         StatelessSession session = SunHotelsHibernateUtil.getSession();
-      ///  StatelessSession session2 = SunHotelsMainServerHibernateUtil.getSession();
         Transaction tx;
-      //  Transaction tx2;
         boolean err=false;
         try{
             tx=session.beginTransaction();
             session.update(destinationBean);
             tx.commit();
-        //    tx2=session2.beginTransaction();
-         //   session2.update(destinationBean);
-         //   tx2.commit();
         }catch (HibernateException e) {
             err=true;
             StringWriter errors = new StringWriter();
@@ -106,16 +95,12 @@ public class DestinationDAO {
     public static boolean deleteDestinationBeanSunhotelsId(int destinationId){
 
         StatelessSession session = SunHotelsHibernateUtil.getSession();
-        //StatelessSession session2 = SunHotelsMainServerHibernateUtil.getSession();
         String hql = String.format("DELETE FROM DestinationBean WHERE destinationId='"+destinationId+"'");
         boolean err=false;
         try{
             session.beginTransaction();
             session.createQuery(hql).executeUpdate();
             session.getTransaction().commit();
-         //   session2.beginTransaction();
-         //   session2.createQuery(hql).executeUpdate();
-         //   session2.getTransaction().commit();
         }catch (HibernateException e) {
             err=true;
             StringWriter errors = new StringWriter();
@@ -138,7 +123,6 @@ public class DestinationDAO {
             errLogger.info(errors.toString());
         }finally {
             session.close();
-          //  session2.close();
         }
         return err;
     }

@@ -79,16 +79,12 @@ public class MealDAO {
     public static boolean deleteAllMeals(int providerId){
 
         StatelessSession session = SunHotelsHibernateUtil.getSession();
-       // StatelessSession session2 = SunHotelsMainServerHibernateUtil.getSession();
         String hql = String.format("DELETE FROM MealBean WHERE providerId='"+providerId+"'");
         boolean err=false;
         try{
             session.beginTransaction();
             session.createQuery(hql).executeUpdate();
             session.getTransaction().commit();
-       //     session2.beginTransaction();
-        //    session2.createQuery(hql).executeUpdate();
-        //    session2.getTransaction().commit();
         }catch (HibernateException e) {
             err=true;
             StringWriter errors = new StringWriter();
@@ -111,7 +107,6 @@ public class MealDAO {
             errLogger.info(errors.toString());
         }finally {
             session.close();
-         //   session2.close();
         }
         return err;
     }
