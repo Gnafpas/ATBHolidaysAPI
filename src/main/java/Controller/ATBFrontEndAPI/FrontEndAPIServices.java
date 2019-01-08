@@ -2320,9 +2320,9 @@ public class FrontEndAPIServices {
                      * Prepare and run threads for different Providers
                      */
                     List<SunHotelsResponse> hotelsResponse = new ArrayList<>();
-                    CountDownLatch latch = new CountDownLatch(2);
-//                    HotelBedsSearchThread hotelBedsSearchThread = new HotelBedsSearchThread(destinationBean, childrenAgesSplit, checkout, checkin, session, params, latch);
-//                    new Thread(hotelBedsSearchThread).start();
+                    CountDownLatch latch = new CountDownLatch(3);
+                    HotelBedsSearchThread hotelBedsSearchThread = new HotelBedsSearchThread(destinationBean, childrenAgesSplit, checkout, checkin, session, params, latch);
+                    new Thread(hotelBedsSearchThread).start();
                     SunHotelsSearchThread sunHotelsSearchThread = new SunHotelsSearchThread(originalDestinationId, checkout, checkin, currencies, originalDestinationIdStrFormat, childrenAges, session, params, latch);
                     new Thread(sunHotelsSearchThread).start();
                     ATBHotelsSearchThread aTBHotelsSearchThread = new ATBHotelsSearchThread(destinationBean, childrenAgesSplit, checkout, checkin, session, params, latch);
@@ -2333,13 +2333,13 @@ public class FrontEndAPIServices {
                         latch.await();
                     } catch (InterruptedException e) {
                     }
-//                    if (hotelBedsSearchThread.getHotelBedsSearchRequestResponse() != null) {
-//                        if (hotelBedsSearchThread.getHotelBedsSearchRequestResponse() != null && hotelBedsSearchThread.getHotelBedsSearchRequestResponse().getHotelsResponse() != null)
-//                            hotelsResponse.addAll(hotelBedsSearchThread.getHotelBedsSearchRequestResponse().getHotelsResponse());
-//                        dbTransactionTimeElapsed = dbTransactionTimeElapsed + hotelBedsSearchThread.getHotelBedsSearchRequestResponse().getDbTransactionTimeElapsed();
-//                        prepareResponseTimeElapsed = prepareResponseTimeElapsed + hotelBedsSearchThread.getHotelBedsSearchRequestResponse().getPrepareResponseTimeElapsed();
-//                        requestTimeElapsed = requestTimeElapsed + hotelBedsSearchThread.getHotelBedsSearchRequestResponse().getRequestTimeElapsed();
-//                    }
+                    if (hotelBedsSearchThread.getHotelBedsSearchRequestResponse() != null) {
+                        if (hotelBedsSearchThread.getHotelBedsSearchRequestResponse() != null && hotelBedsSearchThread.getHotelBedsSearchRequestResponse().getHotelsResponse() != null)
+                            hotelsResponse.addAll(hotelBedsSearchThread.getHotelBedsSearchRequestResponse().getHotelsResponse());
+                        dbTransactionTimeElapsed = dbTransactionTimeElapsed + hotelBedsSearchThread.getHotelBedsSearchRequestResponse().getDbTransactionTimeElapsed();
+                        prepareResponseTimeElapsed = prepareResponseTimeElapsed + hotelBedsSearchThread.getHotelBedsSearchRequestResponse().getPrepareResponseTimeElapsed();
+                        requestTimeElapsed = requestTimeElapsed + hotelBedsSearchThread.getHotelBedsSearchRequestResponse().getRequestTimeElapsed();
+                    }
                     if (sunHotelsSearchThread.getSunHotelsSearchRequestResponse() != null) {
                         if (sunHotelsSearchThread.getSunHotelsSearchRequestResponse() != null && sunHotelsSearchThread.getSunHotelsSearchRequestResponse().getHotelsResponse() != null)
                             hotelsResponse.addAll(sunHotelsSearchThread.getSunHotelsSearchRequestResponse().getHotelsResponse());
